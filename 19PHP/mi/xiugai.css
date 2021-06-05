@@ -1,0 +1,81 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.top{
+    width: 100%;
+    height: 100px;
+    background-image: url("img2/mistore_logo2.png");
+    background-repeat: no-repeat;
+    background-position: 5px;
+}
+.wra{
+    width: 854px;
+    height: 549px;
+    margin: auto;
+    background: #FFFFFF;
+}
+.wraa{
+    width: 786px;
+    height: 88px;
+}
+.wraa img{
+    position: absolute;
+    left: 48%;
+}
+.wra .wrab{
+    font-size: 35px;
+    margin-left: 325px;
+}
+.wrac{
+    margin-left: 260px;
+    margin-top: 30px;
+}
+.wrac input{
+    width: 332px;
+    height: 42px;
+    margin-top: 10px;
+}
+.wrac .w5 input{
+    margin-top: 20px;
+    width: 338px;
+    color: #ffffff;
+    background: #ff6700;
+    border: 0;
+}
+.w6{
+    font-size: 14px;
+    margin-top: 80px;
+    margin-left: 40px;
+    color: #333;
+}
+.w6 a{
+    font-weight: bold;
+}
+.nf{
+    width: 100%;
+    height: 18px;
+    font-size: 14px;
+    color: #333;
+}
+.nf ul li{
+    float: left;
+    margin-left: 10px;
+}
+.nf ul{
+    position: absolute;
+    left: 38%;
+}
+.ng{
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    left: 340px;
+}
+.ng a{
+    color: #333;
+}

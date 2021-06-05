@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米账号-注册</title>
+    <link rel="stylesheet" href="zhuce.css">
+</head>
+<body>
+<div class="top">
+</div>
+    <div class="wra">
+        <form action="sign.php" method="post" class="myform">
+
+        <div class="wraa"><img src="img/mi.png" alt=""></div>
+        <div class="wrab">注册小米账号</div>
+        <div class="wrac">
+            <div class="w1">账号</div>
+            <div class="w2"><input type="text" name="user" class="user"></div>
+            <div class="w3">密码</div>
+            <div class="w4"><input type="text"  name="pass" class="pass"></div>
+            <div class="w5"><input style="background-color:#F56600;border:none;color: white;"type="submit" value="立即注册" onclick="check()">
+            <div class="w6">已阅读并同意：小米<a>用户协议</a>和<a>隐私政策</a></div>
+        </form>
+        </div>
+        
+    </div>
+    <div class="wrad">
+        <div class="nf">
+            <ul>
+                <li><a>简体</a>&nbsp;|</li>
+                <li><a>繁体</a>&nbsp;|</li>
+                <li><a>English</a>&nbsp;|</li>
+                <li><a>常见问题</a>&nbsp;|</li>
+                <li><a>隐私政策</a></li>
+            </ul>
+        </div>
+        <div class="ng">
+            <p>小米公司版权所有-京ICP备10046444-<img src="img2/ghs.png"><a href="#">京公网安备11010802020134号</a>-京ICP证110507号</p>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    "use strict"
+    function check() {
+        let q = document.querySelector(".user").value;
+        let w = document.querySelector(".pass").value;
+        if (q !== "" && w !== "" && q.length >= 5 && w.length < 13 &&
+            escape(q).indexOf("%u") == -1) {
+            if (w.length > 5 && w.length < 16 && escape(w).indexOf("%u") == -1) {
+                document.querySelector(".myform").submit();
+
+            } else {
+                alert("密码错误，请重新输入！")
+                history.go(0);
+            }
+        } else {
+            alert("账号含有非法字符！");
+            history.go(0);
+        }
+    }
+</script>

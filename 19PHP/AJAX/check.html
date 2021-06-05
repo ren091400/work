@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jq/jquery.min.js"></script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>账号</td>
+            <td>密码</td>
+        </tr>
+    </table>
+<button>点击我获取数据</button>
+
+</body>
+</html>
+
+<script>
+    $("button").click(function () {
+        $.ajax({
+            type:"post",
+            url:"../AJAX/admin/data_check.php",
+            data:{
+                "name":"666666",
+                "pass":"666666",
+            },
+            dataType:"JSON",
+            success:function (res) {
+                        for (var i=0;i<res.length;i++){
+                            $("table").append("<tr>"+"<td>"+res[i][1]+"</td>"+"<td>"+res[i][2]+"</td>"+"</tr>");
+                            $("table").append("<tr>"+"<td>"+res[i][1]+"</td>"+"<td>"+res[i][2]+"</td>"+"</tr)");
+                        }
+            }
+        })
+    })
+</script>

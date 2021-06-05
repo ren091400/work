@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./登录.css">
+</head>
+<body>
+<div class="zong"></div>
+<div class="top">
+</div>
+<div class="banner">
+    <div class="gou">
+        <a herf="#" class="dl" id="zh" onclick="dl()">账号登录
+        <span style="color: black">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+    <a herf="#" class="sm" id="sm" onclick="sm()">扫码登陆</a>
+
+    <div class="zhdl" id="zhdl">
+        <form action="login.php" method="post" class="myform">
+            <input  name="user" class="q" type="text" placeholder="邮箱/手机号/小米ID"/>
+            <input  name="pass" class="w" tupe="passworld" placeholder="请输入密码"/>
+            <input class="e" style="background-color:#F56600;border:none;color: white;"type="submit" value="登录" onclick="check()">
+        </form>
+
+        <span class="y_zc">
+            <a href="验证码登录.html" style="color: #f56600;">手机短信登录/注册</a>
+        </span>
+        <span class="z_zc">
+            <a href="注册.html" style="color:black;">立即注册</a>
+            <span>|</span>
+            <a href="forget.html" style="color: black;">忘记密码？</a>
+        </span>
+        <from>
+            <fieldset>
+                <legend>其他方式登录</legend>
+            </fieldset>
+        </from>
+
+<div class="img">
+    <img class="img_tc" src="img2/tu.png" />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+        <div class="nf">
+            <ul>
+                    <li><a>简体</a>&nbsp;|</li>
+                    <li><a>繁体</a>&nbsp;|</li>
+                    <li><a>English</a>&nbsp;|</li>
+                    <li><a>常见问题</a>&nbsp;|</li>
+                    <li><a>隐私政策</a></li>
+                </ul>
+        </div>
+        <div class="ng">
+            <p>小米公司版权所有-京ICP备10046444-<img src="img2/ghs.png"><a href="#">京公网安备11010802020134号</a>-京ICP证110507号</p >
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    "use strict"
+    function check() {
+        let q = document.querySelector(".user").value;
+        let w = document.querySelector(".pass").value;
+        if (q !== "" && w !== "" && q.length >= 5 && w.length < 13 && escape(q).indexOf("%u") == -1) {
+            if (w.length > 5 && w.length < 16 && escape(w).indexOf("%u") == -1) {
+                document.querySelector(".myform").submit();
+                alert("登录成功");
+            } else {
+                alert("密码错误，请重新输入！")
+                history.go(0);
+            }
+        } else {
+            alert("账号含有非法字符！");
+            history.go(0);
+        }
+    }
+</script>
